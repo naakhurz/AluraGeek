@@ -1,0 +1,56 @@
+.listarSide {
+    background: var(--cor-background);
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 3vh;
+}
+
+.listarSide__table {
+    overflow-x: auto;
+    min-width: 90%;
+    min-height: fit-content;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+th, td {
+    border: 1px solid var(--cor-de-tablet-th-td);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: var(--cor-de-second-tablet-th);
+    z-index: 1;
+}
+
+.control-select {
+    border: none;
+    width: 20px;
+    background-color: var(--cor-de-second-tablet);
+    margin-right: 10px;
+}
+
+.icons img {
+    margin-left: 0;
+    transition: transform 0.3s ease;
+}
+
+.icons:hover {
+    transform: scale(1.2);
+}
+/* Agrega este estilo para cambiar el cursor cuando se pase sobre los botones de eliminar */
+.icon-eliminar {
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/registrar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquarda+Bastarda+9+Charted&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>AluraGeek</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class=""
+        src=""
+        alt=""
+      />
+      <h1 class="menu__title">AluraGeek</h1>
+    </header>
+    <main class="grid-container">
+      <section class="registerSide">
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__list__item">
+              <i class="fa-solid fa-house"> </i> <a href="/index.html">Inicio</a>
+            </li>
+            <li class="menu__list__item">
+              <i class="fa-solid fa-book-open"> </i> <a href="registrar.html">Registrar</a>
+            </li>
+            <li class="menu__list__item">
+              <i class="fa-solid fa-list"></i> <a href="listar.html">Listar</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="registerSide">
+        <h2 class="banner__titulo">Registrar Productos</h2>
+        <form class="principal__formulario" data-formulario>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="url">URL de la imagen</label>
+            <input
+              name="url_imagen"
+              id="url_imagen"
+              class="campo__completo"
+              type="url"
+              placeholder="Ingrese la URL de la imagen"
+              minlength="3"
+              required
+              data-url
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="nombre">Nombre</label>
+            <input
+              name="nombre"
+              id="nombre"
+              class="campo__completo"
+              type="text"
+              placeholder="Escriba el nombre del producto"
+              minlength="3"
+              maxlength="100"
+              required
+              data-nombre
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="categoria">Categoría</label>
+            <select name="categoria" id="categoria" required data-categoria>
+              <option value="" disabled selected>
+                Seleccione una categoría *
+              </option>
+              <option value="Electronica">Electrónica</option>
+              <option value="Geek">Art. Geek</option>
+              <option value="Gadget">Art. Gadget</option>
+            </select>
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="descripcion">Descripción</label>
+            <input
+              name="descripcion"
+              id="descripcion"
+              class="campo__completo"
+              type="text"
+              placeholder="Ingrese una descripción del producto"
+              maxlength="200"
+              required
+              data-descripcion
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="precio">Precio $</label>
+            <input
+              name="precio"
+              id="precio"
+              class="campo__completo"
+              type="number"
+              placeholder="Ingrese el precio del producto en dólares"
+              minlength="1"
+              required
+              data-precio
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="cantidad">Cantidad</label>
+            <input
+              name="cantidad"
+              id="cantidad"
+              class="campo__completo"
+              type="number"
+              placeholder="Inrese la cantidad del producto"
+              minlength="1"
+              required
+              data-cantidad
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="tipo_iva">Tipo de IVA</label>
+            <select name="tipo_iva" id="tipo_iva" required data-tipo_iva>
+              <option value="" disabled selected>
+                Seleccione tipo de IVA *
+              </option>
+              <option value="con IVA">Con IVA</option>
+              <option value="sin IVA">Sin IVA</option>
+            </select>
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="descuento">Descuento %</label>
+            <input
+              name="descuento"
+              id="descuento"
+              class="campo__completo"
+              type="number"
+              placeholder="Ingrese el porcentaje de descuento"
+              minlength="1"
+              required
+              data-descuento
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+
+          <div class="formulario__botones">
+            <button
+              value="Siguiente"
+              class="formulario__boton"
+              id="enviar"
+              type="submit"
+            >
+              Registrar
+            </button>
+            <span class="mensaje-error"></span>
+          </div>
+          <div class="formulario__botones">
+            <button
+              value="Siguiente"
+              class="formulario__boton"
+              id="eliminar"
+              type="submit"
+            >
+              Eliminar
+            </button>
+            <span class="mensaje-error"></span>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- Sección de Footer -->
+    <section class="footer">
+      <div class="footer__rodape">
+        <p class="copyright">&copy; Copyright Desarrollado por Maxi Rios - 2024</p>
+      </div>
+    </section>
+    <script src="../js/script.js" type="module"></script>
+    <script src="../js/crearProducto.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/961cfbd158.js" crossorigin="anonymous"></script>
+  </body>
+</html>
